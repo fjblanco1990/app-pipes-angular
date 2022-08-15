@@ -7,3 +7,7 @@ html, body {
 .text-layout {
     color: var(--text-color);
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}

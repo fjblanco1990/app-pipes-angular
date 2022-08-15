@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="text-layout">
   <h1>{{ nombre | titlecase }}</h1>
   <h1>{{ valor | number }}</h1>
@@ -7,9 +7,22 @@
 </div>
 
 
-<button pButton (click)="mostrarNombre()" icon="pi pi-check" iconPos="right">
-  Cambiar nombre
-</button>
 
 
-<p-button [label]="title_button" icon="pi pi-check" > </p-button>
+<p-button 
+  [label]="title_button" 
+  icon="pi pi-bell" 
+  iconPos="right"
+  class="p-button-help"
+  (click)="mostrarNombre()"> 
+</p-button>
+
+<button pButton type="button" label="Help" class="p-button-help"></button>
+
+<p-card [header]="nombre | titlecase" subheader="Esto es un subheader">
+
+ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
+
+</p-card> -->
+<app-menu></app-menu>
+<router-outlet></router-outlet>
