@@ -7,19 +7,79 @@
 
 <div class="grid">
     <div class="col-12 md:col-12 lg:col-4">
-        <p-card header="uppercase">
-            1
+        <p-card header="uppercase" [subheader]="nombreLower | uppercase ">
+            {{ nombreLower | uppercase }}
         </p-card>
     </div>
     <div class="col-12 md:col-12 lg:col-4">
-        <p-card>
-            2
+        <p-card header="lowercase" [subheader]="nombreLower | lowercase">
+            {{nombreLower | lowercase}}
         </p-card>
     </div>
     <div class="col-12 md:col-12 lg:col-4">
-        <p-card>
-            3
+        <p-card header="titlecase" [subheader]="nombreCompleto | titlecase">
+            {{nombreCompleto  }}
         </p-card>
     </div>
 </div>
+
+<div class="text-layout">
+    <h1>Date | Fecha | Pipes</h1>
+    <p>
+        pipes para mostrar las fechas
+    </p>
+    
+</div>
+
+<div class="grid">
+    <div class="col-12 md:col-12 lg:col-6">
+        <p-card>
+            <ul>
+                <li> fecha </li>
+                <li> fecha | date </li>
+                <li> fecha | date: 'short' </li>
+                <li> fecha | date: 'long' </li>
+                <li> fecha | date: 'Custom' </li>
+                <li> fecha | date: 'Mounth' </li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li>  fecha  | date: 'long': 'GMT-4': '' </li>
+                <li>  fecha  | date: 'long': 'GMT-6': '' </li>
+                <li>  fecha  | date: 'long': '': 'en' -change lenguaje </li>
+                <li>  fecha  | date: 'long': '': 'fr' -change lenguaje </li>
+                <li>  fecha  | date: 'long': '': 'es' -change lenguaje </li>
+                <li>  fecha  | date: 'long': '': 'es-CO' -change lenguaje </li>
+            </ul>
+
+
+        </p-card>
+       
+    </div>
+    <div class="col-12 md:col-12 lg:col-6">
+        <p-card>
+            <ul>
+                <li> {{ fecha }} </li>
+                <li> {{ fecha  | date}} </li>
+                <li> {{ fecha  | date: 'short' }} </li>
+                <li> {{ fecha  | date: 'long' }} </li>
+                <li> {{ fecha  | date: 'YYYY,dd,MM, G, EEEE, a' }} </li>
+                <li> {{ fecha  | date: 'M' }} - {{ fecha  | date: 'MM' }}  - {{ fecha  | date: 'MMM' }} - {{ fecha  | date: 'MMMM' }} </li>
+            </ul>
+            <hr>
+            <ul>
+                <li> {{ fecha  | date: 'long': 'GMT-4' }} </li>
+                <li> {{ fecha  | date: 'long': 'GMT-6' }} </li>
+                <li> {{ fecha  | date: 'long': '': 'en' }} </li>
+                <li> {{ fecha  | date: 'long': '': 'fr' }} </li>
+                <li> {{ fecha  | date: 'long': '': 'es' }} </li>
+                <li> {{ fecha  | date: 'long': '': 'es-CO' }} </li>
+            </ul>
+
+        </p-card>
+        
+    </div>
+</div>
+
 

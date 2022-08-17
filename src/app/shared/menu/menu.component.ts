@@ -38,6 +38,16 @@ export class MenuComponent implements OnInit {
             title:'algo',
             label:'Pipes personalizados',
             icon: 'pi pi-cog',
+            items: [
+              {
+                label:'option 1',
+                routerLink:'/'
+              },
+              {
+                label: 'option 2',
+                routerLink:'/'
+              }
+            ]
           }
       ];
   }

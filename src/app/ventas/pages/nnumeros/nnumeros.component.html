@@ -1,1 +1,208 @@
-<p>nnumeros works!</p>
+<div class="text-layout">
+    <h1>Decimal pipes y porcentajes</h1>
+    <p>
+        pipes incluidos en angular - usualmente en el common module
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-12 md:col-12 lg:col-3">
+        <p-card header="Ventas netas" subheader="del presente año">
+            <ul>
+                <li> ventas_value </li>
+                <li> ventas_value | number </li>
+                <li> ventas_netas | number:'1.2-2' </li>
+                <li> (ventas_netas + 1500000) | number:'1.2-2' </li>
+            </ul>
+
+            
+        </p-card>
+    </div>
+   
+    <div class="col-12 md:col-12 lg:col-3">
+        <p-card header="Ventas netas" subheader="del presente año">
+            <ul>
+                <li>
+                    <i class="pi pi-dollar"></i>
+                    {{ ventas_netas}}
+                </li>
+                <li>
+                    <i class="pi pi-dollar"></i>
+                    {{ ventas_netas | number }}
+                </li>
+
+                <li>
+                    <i class="pi pi-dollar"></i>
+                    {{ ventas_netas | number:'1.2-2' }}<!--Dos decimales 2-2 si quiero 4 puedo poner 4-4-->
+                </li>
+
+                <li>
+                    <i class="pi pi-dollar"></i>
+                    {{ (ventas_netas + 1500000) | number:'1.2-2' }}<!--sumer un valor al value y el pipe funciona igual-->
+                </li>
+            </ul>
+            
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-12 lg:col-3">
+        <p-card header="Ventas Brutas" subheader="del presente año">
+            <ul>
+                <li> (ventas_netas + 2000000) | currency </li>
+                <li> (ventas_netas + 2000000) | currency: 'CO' </li>
+                <li> (ventas_netas + 2000000) | currency: '': 'symbol-narrow' </li>
+                <li> (ventas_netas + 2000000) | currency: '': 'symbol-narrow': '1.0-4' </li>
+            </ul>
+        </p-card>
+    </div>
+    
+    <div class="col-12 md:col-12 lg:col-3">
+        <p-card header="Ventas Brutas" subheader="del presente año">
+            <ul>
+                <li>
+                    {{ (ventas_netas + 2000000) | currency }}<!--sumer un valor al value y el pipe funciona igual-->
+                </li>
+                <li>
+                    {{ (ventas_netas + 2000000) | currency: 'CO' }}<!--sumer un valor al value y el pipe funciona igual-->
+                </li>
+                <li>
+                    {{ (ventas_netas + 2000000) | currency: '': 'symbol-narrow' }}<!--sumer un valor al value y el pipe funciona igual-->
+                </li>
+                <li>
+                    {{ (ventas_netas + 2000000) | currency: '': 'symbol-narrow': '1.4-4' }}<!--sumer un valor al value y el pipe funciona igual-->
+                </li>
+            </ul>
+        </p-card>
+    </div>
+</div>
+
+<div class="grid">
+    <div class="col-12 md:col-12 lg:col-6">
+        <p-card header="Ganancias porcentuales" subheader="del presente año">
+            <ul>
+                <li> porcentaje  | percent: '2.2-2' </li>
+               
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-6">
+        <p-card header="Ganancias pocerntuales" subheader="del presente año">
+            <ul>
+                <li>
+                    {{ porcentaje  | percent: '2.2-2' }}<!--sumer un valor al value y el pipe funciona igual-->
+                </li>
+               
+            </ul>
+        </p-card>
+    </div>
+</div>
+
+
+
+<div class="grid">
+    <div class="col-12 md:col-12 lg:col-4">
+        <p-card>
+            <p>Parrafo 1</p>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-4">
+        <p-card>
+            <P>Parrafo 2</P>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-4">
+        <p-card>
+            <p>Parrafo 3</p>
+        </p-card>
+    </div>
+</div>
+
+<div class="grid">
+    <div class="col-12 md:col-12 lg:col-2">
+        <p-card>Parrafo 1</p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-2">
+        <p-card>Parrafo 2</p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-2">
+        <p-card>Parrafo 3</p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-2">
+        <p-card>Parrafo 4</p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-2">
+        <p-card>Parrafo 5</p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-2">
+        <p-card>Parrafo 6</p-card>
+    </div>
+</div>
+<div class="grid">
+    <div class="col-12 md:col-12 lg:col-2">
+        <p-card>
+            <p>Parrafo 1</p>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-4">
+        <p-card>
+            <P>Parrafo 2</P>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-3">
+        <p-card>
+            <P>Parrafo 2</P>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-3">
+        <p-card>
+            <P>Parrafo 2</P>
+        </p-card>
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1>Example Buttons</h1>
+   
+</div>
+
+
+<div class="grid">
+    <div class="col-12 md:col-12 lg:col-3">
+        <p-card header="Button de p-button" >
+            <p-button  styleClass="p-button-help" label="Chaneg person" icon="pi pi-sync"></p-button>
+            <p-button  styleClass="p-button-rounded p-button-outlined" label="Chaneg person" icon="pi pi-check"></p-button>
+          
+        </p-card>
+    </div>
+   
+    <div class="col-12 md:col-12 lg:col-3">
+        <p-card header="Button con pButton atributo" >
+            <button pButton pRipple type="button" label="Help" class="p-button-outlined p-button-help"></button>
+            <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-outlined"></button>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-3">
+        <p-card header="Buttons icons ">
+            <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-text"></button>
+            <button pButton pRipple type="button" icon="pi pi-bookmark" class="p-button-rounded p-button-secondary p-button-text"></button>
+            <button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success p-button-text"></button>
+            <button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-button-text"></button>
+            <button pButton pRipple type="button" icon="pi pi-bell" class="p-button-rounded p-button-warning p-button-text"></button>
+            <button pButton pRipple type="button" icon="pi pi-heart" class="p-button-rounded p-button-help p-button-text"></button>
+            <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-text"></button>
+            <button pButton pRipple type="button" icon="pi pi-filter" class="p-button-rounded p-button-text p-button-plain"></button>
+        </p-card>
+    </div>
+    <div class="col-12 md:col-12 lg:col-3">
+        <p-card header="Buttons icons circular border ">
+            <button pButton pRipple type="button" icon="pi pi-check" class="p-button-rounded p-button-outlined"></button>
+            <button pButton pRipple type="button" icon="pi pi-bookmark" class="p-button-rounded p-button-secondary p-button-outlined"></button>
+            <button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-success p-button-outlined"></button>
+            <button pButton pRipple type="button" icon="pi pi-user" class="p-button-rounded p-button-info p-button-outlined"></button>
+            <button pButton pRipple type="button" icon="pi pi-bell" class="p-button-rounded p-button-warning p-button-outlined"></button>
+            <button pButton pRipple type="button" icon="pi pi-heart" class="p-button-rounded p-button-help p-button-outlined"></button>
+            <button pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-danger p-button-outlined"></button>
+        </p-card>
+    </div>
+</div>
+
